@@ -33,8 +33,6 @@ def find_lunch(month, day, year):
                                                     # just finding different tags step by step.
                                                     # This method won't work if any changes are made to the html code of the secondary lunch menu. :(
     raw_calender = get_page(encode(month, year))
-    friday = raw_calender.lower().find("friday")
-    raw_calender = raw_calender[friday:]
     date_pos = raw_calender.find('>'+str(date.day)+'<')
 
     day_menu = raw_calender.find('<div class="day-menu">', date_pos)
