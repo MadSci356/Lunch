@@ -31,7 +31,7 @@ def find_lunch(month, day, year):
         print "Is yo mamma gonna come to school and cook for you?"
         return None
                                                     # just finding different tags step by step.
-                                                    # This method won't work if any changes are to the html code of the secondary lunch menu. :(
+                                                    # This method won't work if any changes are made to the html code of the secondary lunch menu. :(
     raw_calender = get_page(encode(month, year))
     friday = raw_calender.lower().find("friday")
     raw_calender = raw_calender[friday:]
